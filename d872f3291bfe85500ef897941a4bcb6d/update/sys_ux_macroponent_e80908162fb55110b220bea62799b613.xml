@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
     <sys_ux_macroponent action="INSERT_OR_UPDATE">
         <associated_types/>
+        <bundles/>
         <category>page</category>
         <component_dependencies/>
         <composition>[ {
@@ -577,12 +578,148 @@
           "isHero" : false,
           "isNonDestructive" : false,
           "styles" : { }
+        }, {
+          "elementId" : "button_2",
+          "elementLabel" : "Button 2",
+          "propertyValues" : {
+            "variant" : {
+              "type" : "JSON_LITERAL",
+              "value" : "secondary"
+            },
+            "size" : {
+              "type" : "JSON_LITERAL",
+              "value" : "md"
+            },
+            "label" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "Edit Recipe",
+                "comment" : ""
+              }
+            },
+            "icon" : {
+              "type" : "JSON_LITERAL",
+              "value" : null
+            },
+            "disabled" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "tooltipContent" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "Enter a label",
+                "comment" : ""
+              }
+            },
+            "configAria" : {
+              "type" : "MAP_CONTAINER",
+              "container" : { }
+            }
+          },
+          "eventMappings" : [ {
+            "eventMappingId" : "cljjdijjedddaaebbzddgghhgghhddddjjbaaed",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "x_snc_recipe_db.NAV_ITEM_SELECTED_RELAY_e80908162fb55110b220bea62799b613",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "route" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "edit-recipe"
+                    },
+                    "fields" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "table" : {
+                          "type" : "CONTEXT_BINDING",
+                          "binding" : {
+                            "address" : [ "table" ],
+                            "category" : "props"
+                          }
+                        },
+                        "sysId" : {
+                          "type" : "CONTEXT_BINDING",
+                          "binding" : {
+                            "address" : [ "recipeId" ],
+                            "category" : "props"
+                          }
+                        }
+                      }
+                    },
+                    "params" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "redirect" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "passiveNavigation" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "title" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "multiInstField" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "targetRoute" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "external" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    }
+                  }
+                },
+                "sysId" : "7cd2209a2ff55110b220bea62799b6e1"
+              },
+              "operation" : null,
+              "targetId" : "cljjdijjeddeaaeccaaddgghhggksxuwggtp",
+              "type" : "EVENT"
+            } ]
+          } ],
+          "slot" : null,
+          "definition" : {
+            "id" : "d37ce8abca89d02905fed903c8e34d8e",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "isNonDestructive" : false,
+          "styles" : { }
         } ],
         "layout" : {
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"stylized_text_1","styles":{}},{"element_id":"button_iconic_1","styles":{}},{"element_id":"button_iconic_2","styles":{}},{"element_id":"button_1","styles":{}}],
+            "items" : [{"element_id":"stylized_text_1","styles":{}},{"element_id":"button_iconic_1","styles":{}},{"element_id":"button_iconic_2","styles":{}},{"element_id":"button_1","styles":{}},{"element_id":"button_2","styles":{}}],
             "root" : null,
             "rules" : null,
             "styles" : {"flex-direction":"row","align-items":"center"},
@@ -1323,8 +1460,11 @@
   "inputValues" : { },
   "readEvaluationMode" : "EXPLICIT"
 } ]</data>
+        <description/>
         <dispatched_events>7cd2209a2ff55110b220bea62799b6e1</dispatched_events>
+        <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
         <handled_events/>
         <interactions/>
         <interfaces/>
@@ -1344,6 +1484,7 @@
 }</layout>
         <macroponent_dependencies/>
         <name>Recipe</name>
+        <output_prop_mapping/>
         <props>[ {
   "name" : "recipeId",
   "label" : "recipeId",
@@ -1364,13 +1505,16 @@
   "valueType" : "string",
   "mandatory" : false,
   "defaultValue" : "",
-  "description" : null,
+  "description" : "",
   "readOnly" : true,
   "selectable" : false,
   "disabled" : false
 } ]</props>
         <required_translations>[ {
   "message" : "Directions",
+  "comment" : ""
+}, {
+  "message" : "Edit Recipe",
   "comment" : ""
 }, {
   "message" : "Enter a label",
@@ -1403,13 +1547,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-09-09 16:09:47</sys_created_on>
         <sys_id>e80908162fb55110b220bea62799b613</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Recipe</sys_name>
         <sys_package display_value="Recipe DB" source="x_snc_recipe_db">d872f3291bfe85500ef897941a4bcb6d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Recipe DB">d872f3291bfe85500ef897941a4bcb6d</sys_scope>
         <sys_update_name>sys_ux_macroponent_e80908162fb55110b220bea62799b613</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-09 18:26:19</sys_updated_on>
+        <sys_updated_on>2022-10-18 01:12:34</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
         <includes/>
         <macroponent display_value="Record">a856ac9e2ff55110b220bea62799b62d</macroponent>
         <name>showOnloadAlerts</name>
+        <preset/>
         <required_translations>[ ]</required_translations>
         <script><![CDATA[function handler({api,event,imports}) {
   var paramsString = api.context.props.extraParams,
@@ -46,6 +48,7 @@
         <sys_update_name>sys_ux_client_script_cd56e4de2ff55110b220bea62799b6e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-09-09 18:21:40</sys_updated_on>
+        <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>
 </record_update>

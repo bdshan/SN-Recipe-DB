@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
     <sys_ux_macroponent action="INSERT_OR_UPDATE">
         <associated_types/>
+        <bundles/>
         <category>page</category>
         <component_dependencies/>
         <composition>[ {
@@ -18,6 +19,18 @@
     "ariaRegionHeadingLevel" : {
       "type" : "JSON_LITERAL",
       "value" : "1"
+    },
+    "includeAriaHeading" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "type" : {
+      "type" : "JSON_LITERAL",
+      "value" : "section"
+    },
+    "ariaRole" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
     }
   },
   "eventMappings" : [ ],
@@ -78,6 +91,18 @@
             "ariaRegionHeadingLevel" : {
               "type" : "JSON_LITERAL",
               "value" : "1"
+            },
+            "includeAriaHeading" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "type" : {
+              "type" : "JSON_LITERAL",
+              "value" : "section"
+            },
+            "ariaRole" : {
+              "type" : "JSON_LITERAL",
+              "value" : ""
             }
           },
           "eventMappings" : [ ],
@@ -189,6 +214,18 @@
                     "ariaRegionHeadingLevel" : {
                       "type" : "JSON_LITERAL",
                       "value" : "1"
+                    },
+                    "includeAriaHeading" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "type" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "section"
+                    },
+                    "ariaRole" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : ""
                     }
                   },
                   "eventMappings" : [ ],
@@ -249,6 +286,18 @@
                             "ariaRegionHeadingLevel" : {
                               "type" : "JSON_LITERAL",
                               "value" : "1"
+                            },
+                            "includeAriaHeading" : {
+                              "type" : "JSON_LITERAL",
+                              "value" : false
+                            },
+                            "type" : {
+                              "type" : "JSON_LITERAL",
+                              "value" : "section"
+                            },
+                            "ariaRole" : {
+                              "type" : "JSON_LITERAL",
+                              "value" : ""
                             }
                           },
                           "eventMappings" : [ ],
@@ -656,6 +705,18 @@
     "ariaRegionHeadingLevel" : {
       "type" : "JSON_LITERAL",
       "value" : "1"
+    },
+    "includeAriaHeading" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "type" : {
+      "type" : "JSON_LITERAL",
+      "value" : "section"
+    },
+    "ariaRole" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
     }
   },
   "eventMappings" : [ ],
@@ -936,6 +997,18 @@
     "ariaRegionHeadingLevel" : {
       "type" : "JSON_LITERAL",
       "value" : "1"
+    },
+    "includeAriaHeading" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "type" : {
+      "type" : "JSON_LITERAL",
+      "value" : "section"
+    },
+    "ariaRole" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
     }
   },
   "eventMappings" : [ ],
@@ -2207,9 +2280,56 @@
     }
   },
   "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "9b4b978353211010cbc2ddeeff7b1245",
+    "type" : "GRAPHQL"
+  },
+  "elementId" : "update_record_1",
+  "elementLabel" : "Update Recipe",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "9664d48053461010cbc2ddeeff7b128e",
+    "type" : "COMPOSITE"
+  },
+  "elementId" : "look_up_record_1",
+  "elementLabel" : "Look Up Recipe",
+  "eventMappings" : [ ],
+  "inputValues" : {
+    "table" : {
+      "type" : "JSON_LITERAL",
+      "value" : "x_snc_recipe_db_recipe"
+    },
+    "recordId" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "sysId" ],
+        "category" : "props"
+      }
+    },
+    "returnFields" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "returnTableMetadata" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "returnFieldMetadata" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    }
+  },
+  "readEvaluationMode" : "EAGER"
 } ]</data>
+        <description/>
         <dispatched_events>63528a5ff5fbc1a94533ca7f94b74edb,93e48589a9ee4a69f8d3f5d45ffeb05d</dispatched_events>
+        <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
         <handled_events>509663140f0310107d20409dc4767e00,f8d5cc6c0f0310107d20409dc4767e51,835ec4a00f4310107d20409dc4767eaa,b94818a0cc2cebbe41369181e4c8d6a6,48639d350fe310107d20409dc4767e87,3bcac58cb7731010cd8af8e32e11a971,5a979750533f101035beddeeff7b1231,86a6b0fdb72a2010cd8a1df32e11a9ce</handled_events>
         <interactions/>
         <interfaces/>
@@ -2444,6 +2564,7 @@
 }</layout>
         <macroponent_dependencies/>
         <name>Record</name>
+        <output_prop_mapping/>
         <props>[ {
   "name" : "screen",
   "label" : "screen",
@@ -2840,13 +2961,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-09-09 18:17:51</sys_created_on>
         <sys_id>a856ac9e2ff55110b220bea62799b62d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Record</sys_name>
         <sys_package display_value="Recipe DB" source="x_snc_recipe_db">d872f3291bfe85500ef897941a4bcb6d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Recipe DB">d872f3291bfe85500ef897941a4bcb6d</sys_scope>
         <sys_update_name>sys_ux_macroponent_a856ac9e2ff55110b220bea62799b62d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-09-09 18:22:00</sys_updated_on>
+        <sys_updated_on>2022-10-11 16:39:05</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>
